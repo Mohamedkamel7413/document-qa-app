@@ -76,7 +76,7 @@ def ask():
     Answer:"""
     
     response = client.models.generate_content(
-        model="models/gemini-3.5-flash",
+        model="models/gemini-2.0-flash",
         contents=prompt
     )
     
