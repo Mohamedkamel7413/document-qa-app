@@ -15,7 +15,7 @@ function App() {
     const formData = new FormData();
     formData.append("file", file);
     try {
-      await axios.post("http://localhost:5000/upload", formData);
+      await axios.post("https://document-qa-app-r27w.onrender.com/upload", formData);
       setUploaded(true);
       alert("File uploaded successfully!");
     } catch (error) {
@@ -28,7 +28,7 @@ function App() {
     if (!question) return alert("Please enter a question!");
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:5000/ask", {
+      const response = await axios.post("https://document-qa-app-r27w.onrender.com/ask", {
         question,
         language,
       });
